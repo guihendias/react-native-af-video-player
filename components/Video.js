@@ -314,11 +314,11 @@ class Video extends Component {
       <Animated.View
         style={[styles.background, fullScreen ? styles.fullScreen : inline]}
       >
-        <Text style={textStyle}>Retry</Text>
+        <Text style={textStyle}>Tentar novamente</Text>
         <Icons
           name="replay"
           size={60}
-          color={this.props.theme}
+          color={this.props.theme.center}
           onPress={() => this.setState({ renderError: false })}
         />
       </Animated.View>
@@ -468,7 +468,7 @@ Video.propTypes = {
   rate: PropTypes.number,
   volume: PropTypes.number,
   lockRatio: PropTypes.number,
-  logo: PropTypes.string,
+  logo: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
   theme: PropTypes.object,
   resizeMode: PropTypes.string
