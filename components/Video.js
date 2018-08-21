@@ -319,7 +319,7 @@ class Video extends Component {
     };
     const textStyle = { color: 'white', padding: 10 };
     return (
-      <Animated.View style={[styles.background, fullScreen ? styles.fullScreen : { height: 233 }]}>
+      <Animated.View style={[styles.background, fullScreen ? styles.fullScreen : { height: Win.height * 0.31 }]}>
         <Text style={textStyle}>Tentar novamente</Text>
 
         <Icons
